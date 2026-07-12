@@ -1,0 +1,32 @@
+{
+  "name": "apple-web-design-skill",
+  "version": "0.1.0",
+  "description": "Install the Apple Web Design Codex skill with npx.",
+  "type": "module",
+  "bin": {
+    "apple-web-design-skill": "bin/install.mjs"
+  },
+  "files": [
+    "SKILL.md",
+    "agents",
+    "references",
+    "bin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klaybloom/apple-web-design-skill.git"
+  },
+  "keywords": [
+    "codex",
+    "skill",
+    "apple",
+    "design",
+    "web",
+    "ui"
+  ],
+  "author": "klaybloom",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}
