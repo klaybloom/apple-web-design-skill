@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apple Web Design"
+  short_description: "Apple-inspired web UI review and refactor guidance"
+  default_prompt: "Use $apple-web-design to review this web app against Apple-inspired design principles."
