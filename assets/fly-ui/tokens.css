@@ -1,0 +1,106 @@
+/* Fly UI — generated from tokens.json */
+:root, [data-theme="light"] {
+  --background: #f5f5f7;
+  --surface: #ffffff;
+  --surface-raised: #ffffff;
+  --surface-sunken: #e8e8ed;
+  --fill-hover: #0000000a;
+  --label: #1d1d1f;
+  --label-secondary: #6e6e73;
+  --label-tertiary: #86868b;
+  --separator: #d2d2d7;
+  --border-control: #7a7a7f;
+  --accent: #1d1d1f;
+  --accent-hover: #3a3a3c;
+  --on-accent: #ffffff;
+  --focus-ring: #1d1d1f;
+  --glass: #ffffffb8;
+  --glass-solid: #fbfbfd;
+  --glass-border: #0000001a;
+  --scrim: #00000052;
+  --info: #0062cc;
+  --info-soft: #e5f0fc;
+  --success: #1e7b34;
+  --success-soft: #e7f4ea;
+  --warning: #9a5600;
+  --warning-soft: #fdf2e1;
+  --danger: #c4211b;
+  --danger-soft: #fdecea;
+  --shadow-sm: 0 1px 2px #0000000f, 0 0 0 1px #0000000a;
+  --shadow-md: 0 4px 16px #00000014, 0 1px 3px #0000000f;
+  --shadow-lg: 0 16px 48px #0000001f;
+}
+[data-theme="dark"] {
+  --background: #000000;
+  --surface: #1c1c1e;
+  --surface-raised: #2c2c2e;
+  --surface-sunken: #2c2c2e;
+  --fill-hover: #ffffff14;
+  --label: #f5f5f7;
+  --label-secondary: #a1a1a6;
+  --label-tertiary: #6e6e73;
+  --separator: #38383a;
+  --border-control: #8e8e93;
+  --accent: #f5f5f7;
+  --accent-hover: #d2d2d7;
+  --on-accent: #1d1d1f;
+  --focus-ring: #f5f5f7;
+  --glass: #1e1e20b8;
+  --glass-solid: #1c1c1e;
+  --glass-border: #ffffff1f;
+  --scrim: #00000099;
+  --info: #64aeff;
+  --info-soft: #10263f;
+  --success: #30d158;
+  --success-soft: #12301c;
+  --warning: #ffb340;
+  --warning-soft: #3a2a12;
+  --danger: #ff6961;
+  --danger-soft: #3a1a19;
+  --shadow-sm: 0 0 0 1px #ffffff14;
+  --shadow-md: 0 4px 16px #00000080, 0 0 0 1px #ffffff14;
+  --shadow-lg: 0 16px 48px #000000b3, 0 0 0 1px #ffffff14;
+}
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+  --content-width: 720px;
+  --page-width: 1200px;
+  --toolbar-height: 52px;
+  --control-height-sm: 28px;
+  --control-height-md: 36px;
+  --control-height-lg: 44px;
+  --blur-glass: 20px;
+  --duration-press: 140ms;
+  --duration-fast: 160ms;
+  --duration-base: 220ms;
+  --duration-slow: 360ms;
+  --ease-out-ui: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-ui: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer-ui: cubic-bezier(0.32, 0.72, 0, 1);
+  --font-text: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+.large-title { font-family: var(--font-display); font-size: 34px; line-height: 41px; font-weight: 700; letter-spacing: -0.4px; }
+.title-1 { font-family: var(--font-display); font-size: 28px; line-height: 34px; font-weight: 600; letter-spacing: -0.3px; }
+.title-2 { font-family: var(--font-display); font-size: 22px; line-height: 28px; font-weight: 600; }
+.title-3 { font-family: var(--font-display); font-size: 20px; line-height: 25px; font-weight: 600; }
+.headline { font-family: var(--font-text); font-size: 17px; line-height: 22px; font-weight: 600; }
+.body { font-family: var(--font-text); font-size: 17px; line-height: 28px; font-weight: 400; }
+.callout { font-family: var(--font-text); font-size: 15px; line-height: 22px; font-weight: 400; }
+.subheadline { font-family: var(--font-text); font-size: 14px; line-height: 20px; font-weight: 500; }
+.footnote { font-family: var(--font-text); font-size: 13px; line-height: 18px; font-weight: 400; }
+.caption { font-family: var(--font-text); font-size: 12px; line-height: 16px; font-weight: 500; }
+.code { font-family: var(--font-mono); font-size: 13px; line-height: 20px; font-weight: 400; }
