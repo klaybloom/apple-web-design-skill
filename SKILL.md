@@ -1,13 +1,13 @@
 ---
-name: apple-web-design
-description: Apple Human Interface Guidelines and Liquid Glass inspired web/app UI review and refactor guidance. Use when designing, auditing, or implementing websites, blogs, dashboards, landing pages, React/Next/Vue frontends, or product UIs that should feel Apple-like without copying macOS; especially when applying HIG/Liquid Glass to web, checking layout, typography, color, materials, motion, accessibility, responsive behavior, or creating a consistent Apple-inspired visual style across projects.
+name: fly-ui
+description: Fly UI design system plus Apple Human Interface Guidelines and Liquid Glass inspired web/app UI review and refactor guidance. Use when building UI in the Fly UI style or designing, auditing, or implementing websites, blogs, dashboards, landing pages, React/Next/Vue frontends, or product UIs that should feel Apple-like without copying macOS; especially when applying HIG/Liquid Glass to web, checking layout, typography, color, materials, motion, accessibility, responsive behavior, or creating a consistent Apple-inspired visual style across projects with Fly UI tokens and components.
 ---
 
-# Apple Web Design
+# Fly UI
 
 ## Overview
 
-Use this skill to translate Apple HIG and Liquid Glass principles into practical web UI decisions. The goal is not to copy macOS chrome; the goal is content-first interfaces with clear hierarchy, restrained controls, accessible motion, and production-ready web performance.
+Fly UI is a design system (tokens, components, voice) built on Apple HIG and Liquid Glass principles. Use this skill to apply Fly UI and to translate those principles into practical web UI decisions. The goal is not to copy macOS chrome; the goal is content-first interfaces with clear hierarchy, restrained controls, accessible motion, and production-ready web performance.
 
 ## Modes
 
@@ -29,7 +29,8 @@ If the user does not name a mode, infer it from intent. "Review", "audit", "what
    - Background layer: page surface, imagery, gradients, wallpaper, spatial or decorative context.
 4. Apply Apple-like principles to behavior and hierarchy before visual styling.
 5. Use Liquid Glass only where it supports controls or navigation. Keep long-form content and primary task surfaces stable and readable.
-6. Validate with real pages, responsive widths, light/dark modes, keyboard navigation, reduced motion, and build/lint checks when working in code.
+6. Apply Fly UI values: when the project has no design system, adopt `assets/fly-ui/tokens.css` (and `components.css` when components are wanted); when it has one, map Fly UI values onto its existing tokens instead of adding a parallel system.
+7. Validate with real pages, responsive widths, light/dark modes, keyboard navigation, reduced motion, and build/lint checks when working in code.
 
 ## Safety Rules
 
@@ -41,6 +42,7 @@ If the user does not name a mode, infer it from intent. "Review", "audit", "what
 
 ## References
 
+- Read `references/fly-ui-system.md` first whenever producing or changing UI: tokens, type scale, spacing, radii, motion values, component rules and Chinese UI voice. The machine-readable sources are in `assets/fly-ui/`.
 - Read `references/apple-principles.md` when the task needs HIG/Liquid Glass guidance or official source grounding.
 - Read `references/web-adaptation.md` when applying Apple-inspired design to websites or browser-based apps.
 - Read `references/motion-guidelines.md` when evaluating motion, transitions, press feedback, popovers, drawers, reduced motion, or reduced transparency.
@@ -52,7 +54,9 @@ If the user does not name a mode, infer it from intent. "Review", "audit", "what
 - Do not treat Apple design as a skin. Translate principles into information hierarchy, spacing, typography, accessible controls, and stable reading.
 - Do not use glass everywhere. Glass belongs to control/chrome layers, not main content bodies.
 - Do not imitate macOS window decorations unless the product is explicitly a desktop metaphor or demo.
-- Prefer system font stacks for Apple-like web UIs: `-apple-system`, `BlinkMacSystemFont`, `SF Pro Text`, `SF Pro Display`, `PingFang SC`, `system-ui`.
+- Prefer system font stacks for Apple-like web UIs: `-apple-system`, `BlinkMacSystemFont`, `SF Pro Text`, `SF Pro Display`, `PingFang SC`, `system-ui` (Fly UI's `--font-text`, `--font-display`).
+- Use Fly UI's graphite `accent` sparingly: one primary action per view; text on it is always `on-accent`.
+- Reference tokens by name (`var(--surface)`), never paste their hex values into components.
 - Avoid heavy decorative blur, fixed wallpaper layers, custom cursors, click particles, and large hover movement on content sites.
 - Use real product/media content where inspection matters. Use quiet placeholders only when no real media exists.
 - Design focus states, keyboard navigation, contrast, reduced motion, and no-blur fallbacks as required parts of the interface.
