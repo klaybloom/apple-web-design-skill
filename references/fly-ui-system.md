@@ -2,9 +2,14 @@
 
 Fly UI is the concrete design system built from this skill's principles: content first, restrained controls, glass only on the control layer, motion only to explain state. Use it as the default visual language when a project has no design system of its own.
 
-This file is the guide to *what to build and why*. The code lives in the npm package **`@klaybloom/fly-ui`** (React components, styles and tokens). This reference matches **@klaybloom/fly-ui 0.1.x**.
+Fly UI has two layers:
 
-## Implementing with the package
+- **Visual language — every product.** Tokens (colour, type, spacing, radius, shadow, motion), the three layers, the selected-state rule, voice and icons. Sections: Three layers, Color, Typography, Spacing, Motion, Voice, Icons.
+- **Component package — admin products only.** The npm package **`@klaybloom/fly-ui`** (this reference matches **0.1.x**) is built for admin systems, workbenches, internal tools and dashboards. Sections: Implementing with the package, App shell, Forms, Lists and tables, Components.
+
+Blogs, portfolios, landing pages and other content sites use the visual language only: load `tokens.css`, write the site's own components from tokens, and do not install the package or use the admin patterns below.
+
+## Implementing with the package (admin products)
 
 ### React projects
 
@@ -14,7 +19,7 @@ This file is the guide to *what to build and why*. The code lives in the npm pac
 4. Use the package's components instead of writing new buttons, fields, tables, dialogs or navigation. Build only what the package lacks, with `var(--token)` values and `fly-` prefixed classes, following the rules below.
 5. In React Server Components setups the components are client components (the bundle is marked `"use client"`); import them from client files or let the framework handle the boundary.
 
-### Projects without React (plain HTML, Vue, server templates)
+### Admin products without React (plain HTML, Vue, server templates)
 
 - Import `@klaybloom/fly-ui/tokens.css` and `@klaybloom/fly-ui/components.css` and use the `fly-` class names (structure is visible in `dist/index.js`), or
 - copy `assets/fly-ui/tokens.css` from this skill when npm is not available, and map the tokens onto the project's own components.
@@ -44,7 +49,7 @@ The same `tokens.json` / `tokens.css` are kept in `assets/fly-ui/` of this skill
 | Content | `surface`, `surface-raised`, `surface-sunken`, `Card`, `Table` | Opaque and stable. Never glass. |
 | Control / chrome | `glass`, `glass-solid`, `glass-border`, `blur-glass`, `Toolbar`, popovers, toasts | The only layer that may use glass, always with the `glass-solid` fallback. |
 
-## App shell (admin apps, workbenches)
+## App shell (admin products)
 
 Use `AppShell`: the `Sidebar` and `Toolbar` sit on the `surface` frame with **no divider lines**; the page lives in one `background`-coloured panel with `radius-xl`, inset `space-2` from the frame's right and bottom edges, `space-4` padding inside. White cards sit on the panel `space-3` (12px) apart. No square corners meet anywhere on the page.
 
@@ -115,7 +120,7 @@ System font stacks only, no web fonts:
 - Control heights: buttons 28 / 36 / 44 (`sm` / `md` / `lg`); fields 32 (`md`) and 28 (`sm`, for filter bars and toolbars). 44 is the minimum touch target on touch layouts.
 - Shadows: `shadow-sm` resting cards (a hairline in dark) · `shadow-md` floating toolbars, popovers · `shadow-lg` drawers, dialogs. Never stack heavy shadows.
 
-## Forms
+## Forms (admin products)
 
 - The label sits on the same line, left of the box (`labelPosition="start"`, default). Give a stack of fields one `labelWidth` so the boxes line up. Use `labelPosition="top"` only for long forms and narrow columns.
 - Boxes have no hard border: a `separator` ring plus `shadow-sm`; hover darkens the ring; focus is a 2px `focus-ring`. Under `prefers-contrast: more` the ring becomes `border-control` (3:1).
@@ -123,7 +128,7 @@ System font stacks only, no web fonts:
 - Errors replace the hint under the box, in `danger`, phrased as the next step.
 - `Select` shows the selected option by its text alone (600 weight), no check mark, so option text lines up with the box text.
 
-## Lists and tables
+## Lists and tables (admin products)
 
 - One filter bar above the table: search, then `Select`s (status first, with counts: “待处理（17）”), then actions such as 导出 last — all `size="sm"`, labels on the same line. **List status is a filter, never a separate row of `Tabs`.**
 - One line per row: cells never wrap; secondary facts get their own column instead of a second line. Overflowing columns scroll sideways; pin identifying columns with `fixed: 'start'` and the actions column with `fixed: 'end'`.
@@ -138,7 +143,7 @@ System font stacks only, no web fonts:
 - `ease-out-ui` cubic-bezier(0.23, 1, 0.32, 1) for enter/exit · `ease-in-out-ui` cubic-bezier(0.77, 0, 0.175, 1) between two visible positions · `ease-drawer-ui` cubic-bezier(0.32, 0.72, 0, 1) for drawers and sheets.
 - Animate only `transform` and `opacity`; support `prefers-reduced-motion`, `prefers-reduced-transparency` and `prefers-contrast: more` (all handled in the package's CSS).
 
-## Components — when to use which
+## Components — when to use which (admin products)
 
 | Need | Component | Rule |
 | --- | --- | --- |

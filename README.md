@@ -2,7 +2,7 @@
 
 Fly UI design system and Apple-inspired web UI review and refactor guidance for Codex skills.
 
-Fly UI is a content-first, restrained design system: semantic light/dark tokens with a graphite accent, a system-font type scale tuned for Chinese, glass reserved for the control layer, and motion defaults. Its React components ship as the npm package [`@klaybloom/fly-ui`](https://github.com/klaybloom/fly-ui) (21 components: AppShell, Sidebar, Toolbar, Tabs, Button, Menu, TextField, Select, Checkbox, SegmentedControl, Switch, Card, Table, Pagination, Badge, EmptyState, Spinner, Skeleton, Toaster, Drawer, Dialog). This skill holds the rules: when an agent builds UI, it installs the package, reads its types and combines the components by these rules.
+Fly UI is a content-first, restrained design system: semantic light/dark tokens with a graphite accent, a system-font type scale tuned for Chinese, glass reserved for the control layer, and motion defaults. Its visual language (tokens, type, spacing, motion) applies to every product. For admin systems, workbenches and dashboards, its React components ship as the npm package [`@klaybloom/fly-ui`](https://github.com/klaybloom/fly-ui) (21 components: AppShell, Sidebar, Toolbar, Tabs, Button, Menu, TextField, Select, Checkbox, SegmentedControl, Switch, Card, Table, Pagination, Badge, EmptyState, Spinner, Skeleton, Toaster, Drawer, Dialog). This skill holds the rules: for an admin product the agent installs the package, reads its types and combines the components by these rules; for a blog, portfolio or landing page it uses only the tokens and writes the site's own components.
 
 This skill translates Apple Human Interface Guidelines and Liquid Glass ideas into practical web design decisions for blogs, portfolios, dashboards, product UIs, and content-heavy sites.
 
@@ -10,7 +10,7 @@ It is not an official Apple resource. It links to Apple's official documentation
 
 ## What It Helps With
 
-- Applying the Fly UI design system (tokens, type scale, components, Chinese UI voice) to a new or existing project, using the `@klaybloom/fly-ui` package in React projects
+- Applying the Fly UI design system (tokens, type scale, components, Chinese UI voice) to a new or existing project, using the `@klaybloom/fly-ui` package for admin and dashboard products and the tokens alone for content sites
 - Reviewing a web project for Apple-inspired hierarchy, spacing, typography, materials, motion, and accessibility
 - Applying Liquid Glass ideas without turning the entire page into blur
 - Separating content, controls, and background layers
