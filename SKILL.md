@@ -1,13 +1,13 @@
 ---
 name: fly-ui
-description: Fly UI design system plus Apple Human Interface Guidelines and Liquid Glass inspired web/app UI review and refactor guidance. Use when building UI in the Fly UI style or designing, auditing, or implementing websites, blogs, dashboards, landing pages, React/Next/Vue frontends, or product UIs that should feel Apple-like without copying macOS; especially when applying HIG/Liquid Glass to web, checking layout, typography, color, materials, motion, accessibility, responsive behavior, or creating a consistent Apple-inspired visual style across projects with Fly UI tokens and components.
+description: Fly UI design system plus Apple Human Interface Guidelines and Liquid Glass inspired web/app UI review and refactor guidance. Use when building UI in the Fly UI style or designing, auditing, or implementing websites, blogs, dashboards, landing pages, React/Next/Vue frontends, or product UIs that should feel Apple-like without copying macOS; especially when applying HIG/Liquid Glass to web, checking layout, typography, color, materials, motion, accessibility, responsive behavior, or creating a consistent Apple-inspired visual style across projects with Fly UI tokens and the @klaybloom/fly-ui React component package.
 ---
 
 # Fly UI
 
 ## Overview
 
-Fly UI is a design system (tokens, components, voice) built on Apple HIG and Liquid Glass principles. Use this skill to apply Fly UI and to translate those principles into practical web UI decisions. The goal is not to copy macOS chrome; the goal is content-first interfaces with clear hierarchy, restrained controls, accessible motion, and production-ready web performance.
+Fly UI is a design system (tokens, components, voice) built on Apple HIG and Liquid Glass principles. Its code ships as the npm package `@klaybloom/fly-ui`; this skill holds the rules for using it. Use this skill to apply Fly UI and to translate those principles into practical web UI decisions. The goal is not to copy macOS chrome; the goal is content-first interfaces with clear hierarchy, restrained controls, accessible motion, and production-ready web performance.
 
 ## Modes
 
@@ -29,8 +29,20 @@ If the user does not name a mode, infer it from intent. "Review", "audit", "what
    - Background layer: page surface, imagery, gradients, wallpaper, spatial or decorative context.
 4. Apply Apple-like principles to behavior and hierarchy before visual styling.
 5. Use Liquid Glass only where it supports controls or navigation. Keep long-form content and primary task surfaces stable and readable.
-6. Apply Fly UI values: when the project has no design system, adopt `assets/fly-ui/tokens.css` (and `components.css` when components are wanted); when it has one, map Fly UI values onto its existing tokens instead of adding a parallel system.
+6. Apply Fly UI: in a React project with no design system, use the `@klaybloom/fly-ui` package (see "Implementing with Fly UI" below); in other stacks use its `tokens.css` / `components.css` or `assets/fly-ui/tokens.css`; when the project already has a design system, map Fly UI values onto its existing tokens instead of adding a parallel system.
 7. Validate with real pages, responsive widths, light/dark modes, keyboard navigation, reduced motion, and build/lint checks when working in code.
+
+## Implementing with Fly UI
+
+In `implement` mode on a React project:
+
+1. Check `package.json` for `@klaybloom/fly-ui`. If it is missing, install it (`npm install @klaybloom/fly-ui`) when the user has asked for Fly UI or agreed to adopt it; otherwise ask first.
+2. Import `@klaybloom/fly-ui/styles.css` once at the app entry; themes switch with `data-theme` on `<html>`.
+3. Read `node_modules/@klaybloom/fly-ui/dist/index.d.ts` before writing component code — it is the source of truth for names and props in the installed version.
+4. Use the package's components rather than writing new ones; choose and combine them by the rules in `references/fly-ui-system.md` (app shell, forms, lists and tables, which component for which need).
+5. Build only what the package lacks, from tokens (`var(--…)`) and `fly-` prefixed classes, and say so in the report.
+
+This skill's references match `@klaybloom/fly-ui` 0.1.x. If the installed major or minor version is newer, trust the package's types and README over the tables here.
 
 ## Safety Rules
 
@@ -42,7 +54,7 @@ If the user does not name a mode, infer it from intent. "Review", "audit", "what
 
 ## References
 
-- Read `references/fly-ui-system.md` first whenever producing or changing UI: tokens, type scale, spacing, radii, motion values, component rules and Chinese UI voice. The machine-readable sources are in `assets/fly-ui/`.
+- Read `references/fly-ui-system.md` first whenever producing or changing UI: how to use the `@klaybloom/fly-ui` package, tokens, type scale, spacing, radii, motion, app shell, form and table rules, which component to use when, and Chinese UI voice. Machine-readable tokens are in `assets/fly-ui/`.
 - Read `references/apple-principles.md` when the task needs HIG/Liquid Glass guidance or official source grounding.
 - Read `references/web-adaptation.md` when applying Apple-inspired design to websites or browser-based apps.
 - Read `references/motion-guidelines.md` when evaluating motion, transitions, press feedback, popovers, drawers, reduced motion, or reduced transparency.

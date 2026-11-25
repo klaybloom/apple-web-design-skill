@@ -2,7 +2,7 @@
 
 Fly UI design system and Apple-inspired web UI review and refactor guidance for Codex skills.
 
-Fly UI is a content-first, restrained design system: semantic light/dark tokens with a graphite accent, a system-font type scale tuned for Chinese, glass reserved for the control layer, motion defaults, and seven core components (Button, TextField, SegmentedControl, Switch, Badge, Card, Toolbar). The skill ships its tokens and component styles so any project can adopt them.
+Fly UI is a content-first, restrained design system: semantic light/dark tokens with a graphite accent, a system-font type scale tuned for Chinese, glass reserved for the control layer, and motion defaults. Its React components ship as the npm package [`@klaybloom/fly-ui`](https://github.com/klaybloom/fly-ui) (21 components: AppShell, Sidebar, Toolbar, Tabs, Button, Menu, TextField, Select, Checkbox, SegmentedControl, Switch, Card, Table, Pagination, Badge, EmptyState, Spinner, Skeleton, Toaster, Drawer, Dialog). This skill holds the rules: when an agent builds UI, it installs the package, reads its types and combines the components by these rules.
 
 This skill translates Apple Human Interface Guidelines and Liquid Glass ideas into practical web design decisions for blogs, portfolios, dashboards, product UIs, and content-heavy sites.
 
@@ -10,7 +10,7 @@ It is not an official Apple resource. It links to Apple's official documentation
 
 ## What It Helps With
 
-- Applying the Fly UI design system (tokens, type scale, components, Chinese UI voice) to a new or existing project
+- Applying the Fly UI design system (tokens, type scale, components, Chinese UI voice) to a new or existing project, using the `@klaybloom/fly-ui` package in React projects
 - Reviewing a web project for Apple-inspired hierarchy, spacing, typography, materials, motion, and accessibility
 - Applying Liquid Glass ideas without turning the entire page into blur
 - Separating content, controls, and background layers
@@ -99,10 +99,9 @@ It includes practical motion defaults for common web UI such as buttons, popover
 
 - `SKILL.md` - main skill instructions
 - `references/fly-ui-system.md` - the Fly UI design system: tokens, type, spacing, motion, components, voice
-- `assets/fly-ui/tokens.json` - Fly UI tokens with usage notes (source of truth)
+- `assets/fly-ui/tokens.json` - Fly UI tokens with usage notes, matching `@klaybloom/fly-ui` 0.1.x
 - `assets/fly-ui/tokens.css` - tokens as CSS custom properties, light and dark themes
-- `assets/fly-ui/components.css` - component styles built only from tokens
-- `assets/fly-ui/components.tsx` - React 18 reference components
+- Components are not copied here: they live in the `@klaybloom/fly-ui` package
 - `references/apple-principles.md` - Apple HIG and Liquid Glass principle notes with official links
 - `references/web-adaptation.md` - web-specific adaptation guidance
 - `references/motion-guidelines.md` - motion defaults for common Apple-inspired web UI
