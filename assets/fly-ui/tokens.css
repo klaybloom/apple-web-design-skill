@@ -1,0 +1,183 @@
+/* Fly UI — generated from tokens.json */
+:root, [data-theme="light"] {
+  --background: #f5f5f7; /* Background layer: the page behind content surfaces and chrome. Never put long text directly on a busy background. */
+  --surface: #ffffff; /* Content layer: cards, article bodies, tables, forms. Stable and opaque, never glass. */
+  --surface-raised: #ffffff; /* Popovers, menus, sheets that sit above content. Pair with a shadow token in light, with the lighter fill in dark. */
+  --surface-sunken: #e8e8ed; /* Input fields, segmented-control tracks, switch tracks when off, code blocks. */
+  --fill-hover: #0000000a; /* Hover and pressed wash on plain buttons, list rows and toolbar items. Laid over any surface. */
+  --label: #1d1d1f; /* Primary text and icons on `background`, `surface`, `surface-raised`, `surface-sunken` and `glass` in both themes. */
+  --label-secondary: #6e6e73; /* Secondary text: metadata, hints, captions, toolbar subtitles. Readable (4.5:1+) on `background`, `surface` and `surface-raised` in both themes. */
+  --label-tertiary: #86868b; /* Placeholder and disabled text only, never information a person needs to read. */
+  --separator: #d2d2d7; /* Hairlines between list rows, card edges, toolbar bottom edge. Decorative: never the only boundary of a control. */
+  --border-control: #7a7a7f; /* Borders that define a control (text field, switch off-state outline in high contrast). 3:1 on `surface` and `background`. */
+  --accent: #1d1d1f; /* Graphite accent. Primary button fill, switch on-state, selected segment indicator, links. Once per view for the main action. */
+  --accent-hover: #3a3a3c; /* Hover fill of a primary button on pointer devices. */
+  --on-accent: #ffffff; /* Text and icons on an `accent` or `accent-hover` fill. Never hard-code white. */
+  --focus-ring: #1d1d1f; /* Keyboard focus: a solid 2px ring with a 2px gap. 3:1+ on every surface in both themes. */
+  --glass: #ffffffb8; /* Control/chrome layer only: toolbars, search bars, floating actions, menus. Always with `blur-glass` and the `glass-solid` fallback. */
+  --glass-solid: #fbfbfd; /* Opaque fallback for `glass` when backdrop-filter is unsupported or prefers-reduced-transparency is on. */
+  --glass-border: #0000001a; /* Inner edge that keeps a glass control readable against content scrolling beneath it. */
+  --scrim: #00000052; /* Dims the page behind a modal sheet. */
+  --info: #0062cc; /* Informational status text and icons on `surface` and `info-soft`. Always with a word or icon. */
+  --info-soft: #e5f0fc; /* Background of an informational badge or banner; text on it is `info`. */
+  --success: #1e7b34; /* Success status text and icons on `surface` and `success-soft`. Always with a word or icon, never colour alone. */
+  --success-soft: #e7f4ea; /* Background of a success badge or banner; text on it is `success`. */
+  --warning: #9a5600; /* Warning status text and icons on `surface` and `warning-soft`. */
+  --warning-soft: #fdf2e1; /* Background of a warning badge or banner; text on it is `warning`. */
+  --danger: #c4211b; /* Destructive actions and error text on `surface` and `danger-soft`; text-field error border. */
+  --danger-soft: #fdecea; /* Background of an error badge or banner; text on it is `danger`. */
+  --shadow-sm: 0 1px 2px #0000000f, 0 0 0 1px #0000000a; /* Resting cards that need lift off `background`, switch knobs. */
+  --shadow-md: 0 4px 16px #00000014, 0 1px 3px #0000000f; /* Floating toolbars, popovers, menus. */
+  --shadow-lg: 0 16px 48px #0000001f; /* Sheets and modal dialogs. */
+}
+[data-theme="dark"] {
+  --background: #000000;
+  --surface: #1c1c1e;
+  --surface-raised: #2c2c2e;
+  --surface-sunken: #2c2c2e;
+  --fill-hover: #ffffff14;
+  --label: #f5f5f7;
+  --label-secondary: #a1a1a6;
+  --label-tertiary: #6e6e73;
+  --separator: #38383a;
+  --border-control: #8e8e93;
+  --accent: #f5f5f7;
+  --accent-hover: #d2d2d7;
+  --on-accent: #1d1d1f;
+  --focus-ring: #f5f5f7;
+  --glass: #1e1e20b8;
+  --glass-solid: #1c1c1e;
+  --glass-border: #ffffff1f;
+  --scrim: #00000099;
+  --info: #64aeff;
+  --info-soft: #10263f;
+  --success: #30d158;
+  --success-soft: #12301c;
+  --warning: #ffb340;
+  --warning-soft: #3a2a12;
+  --danger: #ff6961;
+  --danger-soft: #3a1a19;
+  --shadow-sm: 0 0 0 1px #ffffff14;
+  --shadow-md: 0 4px 16px #00000080, 0 0 0 1px #ffffff14;
+  --shadow-lg: 0 16px 48px #000000b3, 0 0 0 1px #ffffff14;
+}
+:root {
+  --space-1: 4px; /* Icon-to-label gap inside compact controls. */
+  --space-2: 8px; /* Gap between related controls in a toolbar or button group. */
+  --space-3: 12px; /* Control horizontal padding (sm), list row vertical padding. */
+  --space-4: 16px; /* Gap between cards, control horizontal padding (md), page gutter on phones, gap between form fields. */
+  --space-5: 20px; /* Card padding on compact layouts. */
+  --space-6: 24px; /* Card padding. */
+  --space-8: 32px; /* Page gutter on desktop, gap between page sections. */
+  --space-12: 48px; /* Space above a page's large title, between major regions. */
+  --radius-sm: 4px; /* Badges, checkboxes, segments inside a segmented control, small (sm) buttons and fields. */
+  --radius-md: 6px; /* Buttons, text fields, menu items, segmented-control track. */
+  --radius-lg: 8px; /* Cards, tables, popovers and menus. Kept small so content blocks sit square with the page frame (sidebar, toolbar). */
+  --radius-xl: 12px; /* Sheets and modal dialogs. */
+  --radius-full: 9999px; /* Pills: switches, capsule toolbars, avatar circles. */
+  --content-width: 720px; /* Max width of article bodies and long forms. */
+  --page-width: 1200px; /* Max width of dashboards and app pages. */
+  --toolbar-height: 52px; /* Height of the glass toolbar. */
+  --control-height-sm: 28px; /* Small buttons and segmented controls in dense toolbars. */
+  --control-height-md: 36px; /* Default buttons and text fields. */
+  --control-height-lg: 44px; /* Large buttons; the minimum touch target on phones. */
+  --blur-glass: 20px; /* backdrop-filter blur for `glass` chrome. Keep it modest for Safari and mobile performance. */
+  --duration-press: 140ms; /* Press feedback (scale 0.97) on buttons. */
+  --duration-fast: 160ms; /* Hover, colour and toggle transitions; tooltips. */
+  --duration-base: 220ms; /* Dropdowns, popovers, segmented indicator. */
+  --duration-slow: 360ms; /* Sheets and drawers. */
+  --ease-out-ui: cubic-bezier(0.23, 1, 0.32, 1); /* Entering and exiting UI; responds immediately. */
+  --ease-in-out-ui: cubic-bezier(0.77, 0, 0.175, 1); /* Movement between two visible positions (segment indicator). */
+  --ease-drawer-ui: cubic-bezier(0.32, 0.72, 0, 1); /* Sheets and drawers. */
+  --font-text: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --text-large-title: 700 34px/41px var(--font-display); /* One per page: the page title. */
+  --text-title-1: 600 28px/34px var(--font-display); /* Section titles on overview pages. */
+  --text-title-2: 600 22px/28px var(--font-display); /* Card and sheet titles. */
+  --text-title-3: 600 20px/25px var(--font-display); /* Sub-section titles inside a card. */
+  --text-headline: 600 17px/22px var(--font-text); /* Row titles, emphasised labels, toolbar title. */
+  --text-body: 400 17px/28px var(--font-text); /* Long-form reading text, max width `content-width`. Line height tuned for Chinese. */
+  --text-callout: 400 15px/22px var(--font-text); /* Default UI text: buttons, inputs, table cells, dense dashboards. */
+  --text-subheadline: 500 14px/20px var(--font-text); /* Field labels, segmented controls, tab labels. */
+  --text-footnote: 400 13px/18px var(--font-text); /* Hints, helper and error text under fields, metadata. */
+  --text-caption: 500 12px/16px var(--font-text); /* Badges and the smallest labels. Never thinner than 400. */
+  --text-code: 400 13px/20px var(--font-mono); /* IDs, code, logs. Let blocks scroll horizontally rather than wrap. */
+}
+.large-title {
+  font-family: var(--font-display);
+  font-size: 34px;
+  line-height: 41px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+}
+.title-1 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+.title-2 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.title-3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.headline {
+  font-family: var(--font-text);
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.body {
+  font-family: var(--font-text);
+  font-size: 17px;
+  line-height: 28px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.callout {
+  font-family: var(--font-text);
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.subheadline {
+  font-family: var(--font-text);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.footnote {
+  font-family: var(--font-text);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.caption {
+  font-family: var(--font-text);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.code {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0;
+}

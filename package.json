@@ -1,24 +1,28 @@
 {
   "name": "apple-web-design-skill",
-  "version": "0.1.0",
-  "description": "Install the Apple Web Design Codex skill with npx.",
+  "version": "0.2.0",
+  "description": "Install the Fly UI design-system skill (Apple-inspired web UI guidance) for Codex and other agents with npx.",
   "type": "module",
   "bin": {
-    "apple-web-design-skill": "bin/install.mjs"
+    "apple-web-design-skill": "bin/install.mjs",
+    "fly-ui-skill": "bin/install.mjs"
   },
   "files": [
     "SKILL.md",
     "agents",
     "references",
+    "assets",
     "bin"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/klaybloom/apple-web-design-skill"
+    "url": "git+https://github.com/klaybloom/apple-web-design-skill.git"
   },
   "keywords": [
     "codex",
     "skill",
+    "fly-ui",
+    "design-system",
     "apple",
     "design",
     "web",
@@ -28,5 +32,6 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "homepage": "https://github.com/klaybloom/apple-web-design-skill#readme"
 }

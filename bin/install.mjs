@@ -6,7 +6,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const skillName = 'apple-web-design';
+const skillName = 'fly-ui';
 const packageRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
 
@@ -15,7 +15,7 @@ function usage() {
 
 Usage:
   npx apple-web-design-skill
-  npx apple-web-design-skill --target ~/.codex/skills/apple-web-design
+  npx apple-web-design-skill --target ~/.codex/skills/fly-ui
 
 Options:
   --target <path>  Install to a specific skill directory.
@@ -69,7 +69,7 @@ function parseArgs() {
 async function copySkill(target) {
   const tempTarget = `${target}.tmp-${process.pid}`;
   const backupTarget = `${target}.backup-${timestamp()}`;
-  const requiredEntries = ['SKILL.md', 'agents', 'references'];
+  const requiredEntries = ['SKILL.md', 'agents', 'references', 'assets'];
 
   await rm(tempTarget, { recursive: true, force: true });
   await mkdir(tempTarget, { recursive: true });
