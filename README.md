@@ -20,10 +20,10 @@ It is not an official Apple resource. It links to Apple's official documentation
 
 ## Install
 
-Install with `npx`:
+Install with `npx` (the npm package keeps the repository's name, `apple-web-design-skill`; the installed skill is `fly-ui`):
 
 ```bash
-npx fly-ui-skill
+npx apple-web-design-skill
 ```
 
 This installs the skill to:
@@ -35,13 +35,13 @@ This installs the skill to:
 If you use a custom Codex home, set `CODEX_HOME`:
 
 ```bash
-CODEX_HOME=/path/to/codex npx fly-ui-skill
+CODEX_HOME=/path/to/codex npx apple-web-design-skill
 ```
 
 Or pass an explicit target:
 
 ```bash
-npx fly-ui-skill --target ~/.codex/skills/fly-ui
+npx apple-web-design-skill --target ~/.codex/skills/fly-ui
 ```
 
 ### Manual Install
@@ -49,7 +49,7 @@ npx fly-ui-skill --target ~/.codex/skills/fly-ui
 Clone the repository into your Codex skills directory:
 
 ```bash
-git clone https://github.com/klaybloom/fly-ui-skill.git ~/.codex/skills/fly-ui
+git clone -b fly-ui https://github.com/klaybloom/apple-web-design-skill.git ~/.codex/skills/fly-ui
 ```
 
 If you already have a local copy, update it with:
