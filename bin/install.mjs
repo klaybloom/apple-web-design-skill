@@ -14,8 +14,8 @@ function usage() {
   console.log(`Install ${skillName} for Codex.
 
 Usage:
-  npx fly-ui-skill
-  npx fly-ui-skill --target ~/.codex/skills/fly-ui
+  npx apple-web-design-skill
+  npx apple-web-design-skill --target ~/.codex/skills/fly-ui
 
 Options:
   --target <path>  Install to a specific skill directory.
